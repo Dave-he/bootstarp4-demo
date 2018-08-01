@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>制作自己的网页</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<style>
+    .myheader{
+        background: url("images/banner2.jpg");
+        background-size: myheader;
+    }
+</style>
+<body>
+<header>
+    <!--报警提示:&times 叉号  -->
+    <div class="alert alert-info text-center mb-0 rounded-5 alert-dismissible fade show">
+        BootStarp4上线啦！
+        <button class="close" data-dismiss="alert">&times;</button>
+    </div>
+    <!--导航条-->
+    <div class="container">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a href="#" class="navbar-brand"> 导航</a>
+            <!--收缩data-target id = menu 的 内容 s-->
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link">YouKu</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Youtube</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">blibli</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </div>
+
+    <div class="myheader text-dark text-center py-5">
+        <h1 class="display-3 mb-3">我的首页</h1>
+        <a href="//i.youku.com/komavideo" target="_blank" class="btn btn-primary btn-lg">优酷频道</a>
+        <a href="//www.baidu.com" target="_blank" class="btn btn-danger btn-lg">百度一下</a>
+    </div>
+</header>
+<main>
+    <section class="py-5">
+        <h2 class="text-center mb-5">游戏视频</h2>
+        <div class="container">
+            <div class="mb-5 row">
+                <div class="col-md-9">
+                    <h3>为什么说 Java 程序员到了必须掌握 Spring Boot 的时候？</h3>
+                    <p>说起 Spring Boot 我们不得不先了解一下 Spring 这个企业，不仅因为 Spring Boot 来源于 Spirng 大家族，而且 Spring Boot 的诞生和 Sping 框架的发展息息相关。
+
+                        时间回到2002年，当时正是 Java EE 和 EJB 大行其道的时候，很多知名公司都是采用此技术方案进行项目开发。这时候有一个美国的小伙子认为 EJB 太过臃肿，并不是所有的项目都需要使用 EJB 这种大型框架，应该会有一种更好的方案来解决这个问题。
+
+                        为了证明他的想法是正确的，于2002年10月甚至写了一本书《 Expert One-on-One J2EE 》，介绍了当时 Java 企业应用程序开发的情况，并指出了 Java EE 和 EJB 组件框架中存在的一些主要缺陷。在这本书中，他提出了一个基于普通 Java 类和依赖注入的更简单的解决方案。
+
+                        在书中，他展示了如何在不使用 EJB 的情况下构建高质量，可扩展的在线座位预留系统。为了构建应用程序，他编写了超过 30,000 行的基础结构代码，项目中的根包命名为 com.interface21，所以人们最初称这套开源框架为 interface21，也就是 Spring 的前身。
+
+                        他是谁呢，他就是大名鼎鼎的 Rod Johnson （下图）, Rod Johnson 在悉尼大学不仅获得了计算机学位，同时还获得了音乐学位，更令人吃惊的是在回到软件开发领域之前，他还获得了音乐学的博士学位。现在 Rod Johnson 已经离开了 Spring ，成为了一个天使投资人，同时也是多个公司的董事，早已走上人生巅峰。</p>
+                </div>
+                <div class="col-md-3">
+                    <img src="images/main1.jpg" alt="Spring Boot">
+                </div>
+            </div>
+            <div class="mb-5 row">
+                <div class="col-md-9 order-md-2">
+                    <h3>Spring Boot 2.0 版的开源项目云收藏来了！</h3>
+                    <p>先给大家晒一下云收藏的几个数据，作为一个 Spring Boot 的开源项目（https://github.com/cloudfavorites/favorites-web）目前在 Github 上面已经有1600多个 Star，如果按照 SpringBoot 标签进行筛选的话也可以排到第五位。
+
+                        当云收藏1.0开发完成之后，同步将云收藏部署到了服务器上，申请了一个域名www.favorites.ren方便大家使用，到目前为止：网站的注册用户4000多人，共计收藏文章100000多条，在百度上搜索：云收藏，排在第一的就是云收藏的官网。2年多的时间这个数据其实也并不是很耀眼，但是作为一个学习 Spring Boot 的开源软件来讲，已经不错了。
+
+                        云收藏的部署之路也挺曲折，刚开始的时候部署在我以前公司的服务器上，后来离职的时候在阿里云买了个1核1G的云服务器，因为安装了 Mysql、Redis、还有其它小软件导致服务器非常卡，那段时间访问云收藏的时候需要等待2-3秒才会有响应。
+
+                        终于有一天自己也不能忍了，花钱把服务器升级到2核2G，访问速度虽有所提升但还是很不理想，那段时间工作很忙也没时间优化。网站的 Bug 也是一片，有时候还会突然中断服务几个小时，流失了一大批用户，甚至有人在 Github 上面留言说：看来微笑哥已经放弃云收藏了，我看了之后只能苦笑。
+
+                        到了今年 Spring Boot 2.0 发布的时候，我就计划着把云收藏全面升级到2.0，顺便做一些优化让访问速度快一点。但一拖就是2个月，终于在前几个周末抽出了一点时间，将云收藏升级到了 Spring Boot 2.0 同时修复了一批显而易见的 Bug ,使用 Nginx 将静态图片等资源做了代理，当这些工作完全做完的时候，云收藏的访问速度明显得到了提升，大家可以访问www.favorites.ren体验一下。
+
+                        将云收藏从 Spring Boot 1.0 升级到 2.0 的时候也遇到了一些问题，在修改的过程中记录下来，今天整理一下分享出来，方便后续升级的朋友少踩一些坑。</p>
+                </div>
+                <div class="col-md-3 order-md-1">
+                    <img src="images/main2.jpg" alt="云收藏" class="w-100">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-light text-center py-5">
+        <h2>今后计划</h2>
+        <div class="container">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="text-center">基础技术</th>
+                        <th class="text-center">高级知识</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>css入门</td>
+                        <td>勇者斗士</td>
+                    </tr>
+                    <tr>
+                        <td>Git入门</td>
+                        <td>信长</td>
+                    </tr>
+                    <tr>
+                        <td>MogoDB入门</td>
+                        <td>怪物猎人</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <section class="py-5">
+        <h2 class="text-center">我爱NBA</h2>
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#east" class="nav-link active" data-toggle="tab">东部（East）</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#west" class="nav-link " data-toggle="tab">西部（West）</a>
+                </li>
+            </ul>
+            <div class="tab-content py-3">
+                <div id="east" class="tab-pane active">
+                    <p>2018年东部冠军是
+                        <span class="font-weight-bold text-success" th:title = "绿凯东部第一" data-toggle="tooltip" data-placement="top">
+                            凯尔特人
+                        </span>
+                        还是
+                        <span class="font-weight-bold text-danger" th:title="老詹没输" data-toggle="tooltip" data-placement="bottom">
+                            骑士
+                        </span>
+                        ？不会是猛龙吧</p>
+                </div>
+                <div id="west" class="tab-pane">
+                    <p>西部冠军肯定是勇士了，不过火箭今年也很不错</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="text-center text-muted py-4">
+    Copyright @heyx heyx.com
+</footer>
+<!--<iframe src="//player.bilibili.com/player.html?aid=23163382&cid=38550792&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>-->
+<script th:src="@{/bootstrap/js/jquery.min.js}"></script>
+<script th:src="@{/bootstrap/js/popper.min.js}" ></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+<script>
+    $(function () {
+        'use strict';
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+</body>
+</html>

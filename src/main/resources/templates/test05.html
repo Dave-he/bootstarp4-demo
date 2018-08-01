@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid练习</title>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+<body>
+画面占12区域
+<div class="container">
+    <div class="row mb-3">
+        <div class="col-4 bg-danger">
+            COL1
+        </div>
+        <div class="col-4 bg-success">
+            COL2
+        </div>
+        <div class="col-4 bg-warning">
+            COL3
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-2 bg-danger">
+            COL1
+        </div>
+        <div class="col-8 bg-success">
+            COL2
+        </div>
+        <div class="col-2 bg-warning">
+            COL3
+        </div>
+    </div>
+
+    <!--超过12-->
+    <div class="row mt-3">
+        <div class="col-6 bg-danger">
+            COL1
+        </div>
+        <div class="col-4 bg-success">
+            COL2
+        </div>
+        <div class="col-8 bg-warning">
+            COL3
+        </div>
+    </div>
+</div>
+
+响应式布局
+<div class="row mb-3">
+    <div class="col-6 bg-success">Hello1</div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-xl-12 col-lg-10 col-md-8 col-sm-4 col-6 bg-warning">Hello2</div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-12 col-md-6 bg-danger">Hello3</div>
+    <div class="col-12 col-md-6 bg-primary">Hello3</div>
+</div>
+
+<div class="row mb-3 " >
+    <div class="col-12 col-md-6 bg-danger">Hello4</div>
+    <div class="d-none d-md-block col-md-6 bg-primary">Hello4</div>
+</div>
+
+<script th:src="@{/bootstrap/js/jquery.min.js}"></script>
+<script th:src="@{/bootstrap/js/popper.min.js}" ></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+</body>
+</html>
